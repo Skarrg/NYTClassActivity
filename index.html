@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
     <!-- FontAwesome -->
+    <!-- Stylesheet-->
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
 
 </head>
 
@@ -27,30 +29,57 @@
         </div>
     </div>
     <div id="container">
-        <div class="row headerrow">
-            <div class="col">
 
+        <!-- Seach Parameter -->
+        <div class="row">
+            <div class="card">
+                <h5 class="card-header">Search Parameters</h5>
+                <div class="card-body">
+                    <form>
+
+                        <div class="form-group">
+                            <label for="search-input">Search Term:</label>
+                            <input type="text" class="form-control" id="search-input" 
+                                placeholder="Enter something you want to search">
+                            
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+
+                    </form>
+                </div>
             </div>
-        </div>
-        <div class="row searchrow">
-            <div class="col">
+            <!-- Seach Parameter -->
 
+
+            <div class="row searchrow">
+                <div class="col">
+
+                </div>
             </div>
-        </div>
-        <div class="row resultsrow">
-            <div class="col">
+            <div class="row resultsrow">
+                <div class="col">
 
+                </div>
             </div>
+            <footer class="page-footer font-small fixed-bottom white border-top">
+                <div class="text-center"><span class="text-muted">Made with lots and lots of love &#x2661</span></div>
+            </footer>
+
+
         </div>
-        <footer class="page-footer font-small white">
-            <div class="text-center"><span class="text-muted">Made with lots and lots of love &#x2661</span></div>
-        </footer>
 
 
-    </div>
-
-
-    <script src="assets/javascript/app.js"></script>
+        <script src="assets/javascript/app.js"></script>
 </body>
 
 </html>
