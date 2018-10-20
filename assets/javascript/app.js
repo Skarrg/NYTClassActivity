@@ -7,11 +7,14 @@ $("button").click(function (event) {
         
     var begin_date = $("#begin_date").text();
     var end_date = $("#end_date").text();
-    var q = $("#q").text();
+    var q = $("#search-input").val();
+    if(q.length == 0){
+        q = "911";
+    }
 
     queryURL += '?' + $.param({
         'api-key': "4022bac12aa44a84a335a5d4e2b379cc",
-        'q': "911",
+        'q': q,
         'begin_date': "19000101",
         'end_date': "20200101",
         'sort': "newest"
