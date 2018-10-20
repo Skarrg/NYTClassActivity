@@ -2,9 +2,14 @@
 var apiKey = "4022bac12aa44a84a335a5d4e2b379cc";
 var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 
+<<<<<<< HEAD
 $("button").click(function (event) {
     event.preventDefault();
         
+=======
+$("#search").click(function () {
+
+>>>>>>> cc4718afaf070cc3281df39d0bc81e3edb35c4cf
     var begin_date = $("#begin_date").text();
     var end_date = $("#end_date").text();
     var q = $("#q").text();
@@ -12,8 +17,8 @@ $("button").click(function (event) {
     queryURL += '?' + $.param({
         'api-key': "4022bac12aa44a84a335a5d4e2b379cc",
         'q': "911",
-        'begin_date': "19900101",
-        'end_date': "20181020",
+        'begin_date': "19000101",
+        'end_date': "20200101",
         'sort': "newest"
     });
 
