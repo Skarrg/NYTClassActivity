@@ -31,45 +31,58 @@
 
         <!-- Seach Parameter -->
         <div class="row">
-            <div class="card">
-                <h5 class="card-header">Search Parameters</h5>
-                <div class="card-body">
-                    <form>
-
-                        <div class="form-group">
-                            <label for="search-input">Search Term:</label>
-                            <input type="text" class="form-control" id="search-input" 
-                                placeholder="Enter something you want to search">
-                            
-                        </div>
-
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                        </div>
-
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-
-                    </form>
-                </div>
-            </div>
-            <!-- Seach Parameter -->
-
-
-            <div class="row searchrow">
                 <div class="col">
+                    <div class="card" id="searchGoesHere">
+                        <h5 class="card-header">Search Parameters</h5>
+                        <div class="card-body">
+                            <form>
+                                <div class="parameters-group">
+                                    <label for="search-input">Search Term:</label>
+                                    <input type="text" class="form-control" id="search-input" placeholder="Enter something you want to search"
+                                        required>
+                                </div>
+    
+                                <div class="parameters-group mt-3">
+                                    <label for="numberToSearch-input">Number of Records to Retrieve:</label>
+                                    <input type="number" class="form-control" id="numberToSearch-input" required>
+                                </div>
+    
+                                <div class="parameters-group mt-3">
+                                    <label for="startYear-input">Start Year(Optional): </label>
+                                    <input type="date" class="form-control" id="startYear-input"
+                                    placeholder="MM-DD-YYYY">
+                                </div>
+    
+                                <div class="parameters-group mt-3">
+                                    <label for="endYear-input">End Year(Optional): </label>
+                                    <input type="date" class="form-control" id="endYear-input" placeholder="MM-DD-YYYY">
+                                </div>
+    
+                                <button id = "submit" type="submit" class="btn btn-primary mt-3">Search</button>
 
+                                <button id = "reset" type="submit" class="btn btn-primary mt-3">Reset Form</button>
+    
+                            </form>
+                        </div>
+                    </div>
                 </div>
+    
             </div>
-            <div class="row resultsrow">
-                <div class="col">
+            <!-- Results -->
+            <div class="row mt-5">
+                    <div class="col">
+                        <div class="card">
+                            <h5 class="card-header">Top Articles</h5>
+                            <div class="card-body" id="resultGoesHere">
+                                
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+            <!-- Results -->
 
-                </div>
-            </div>
+
             <footer class="page-footer font-small fixed-bottom white border-top">
                 <div class="text-center"><span class="text-muted">Made with lots and lots of love &#x2661</span></div>
             </footer>
