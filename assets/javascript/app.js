@@ -2,7 +2,7 @@
 var apiKey = "4022bac12aa44a84a335a5d4e2b379cc";
 var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 
-$("button").click(function (event) {
+$("#submit").click(function (event) {
     event.preventDefault();
         
     var begin_date = $("#begin_date").text();
@@ -26,7 +26,7 @@ $("button").click(function (event) {
     }).then(function (response) {
         console.log(response);
         //clean up previous search.
-        $(".resultsrow").empty();
+        $("#resultGoesHere").empty();
 
         var docs = response.response.docs;
         for (var i = 0; i < docs.length; i++) {
@@ -37,7 +37,7 @@ $("button").click(function (event) {
             newDiv.append(headLine);
             newDiv.append(pubDate);
             newDiv.append(snippet);
-            $(".resultsrow").append(newDiv);
+            $("#resultGoesHere").append(newDiv);
         }
     });
 
