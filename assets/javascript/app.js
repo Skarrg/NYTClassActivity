@@ -26,6 +26,14 @@ $.ajax({
 }).then(function (response) {
 
     console.log(response);
-
-
+    var docs = response.docs;
+    for(var i =0; i < docs.length; i++){
+        var newDiv = $("<div>");
+        var headLine = $("<h2>").text(docs[i].headline);
+        var pubDate = $("<p>").text(docs[i].pub_date);
+        var snippet = $("<p>").text(docs[i].snippet);
+        newDiv.append(headLine);
+        newDiv.append(pubDate);
+        newDiv.append(snippet);
+    }
 });
