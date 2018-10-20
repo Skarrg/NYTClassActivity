@@ -30,7 +30,7 @@ $("#submit").click(function (event) {
 
         var docs = response.response.docs;
         for (var i = 0; i < docs.length; i++) {
-            var newDiv = $("<div>");
+            var newDiv = $("<div>").addClass("article");
             var headLine = $("<h2>").text(docs[i].headline.main);
             var pubDate = $("<p>").addClass("pubDate").text(docs[i].pub_date);
             var snippet = $("<p>").addClass("snippet").text(docs[i].snippet);
