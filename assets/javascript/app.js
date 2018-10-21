@@ -2,15 +2,27 @@
 var apiKey = "4022bac12aa44a84a335a5d4e2b379cc";
 var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 
+
+
 $("#submit").click(function (event) {
     event.preventDefault();
         
-    var begin_date = $("#begin_date").text();
-    var end_date = $("#end_date").text();
+    var begin_date = $("#begin_date").val();
+    var end_date = $("#end_date").val();
     var q = $("#search-input").val();
+    if(begin_date.length != 4){
+        begin_date = "1900";
+    }
+    
+    if(end_date.length != 4){
+        end_date = "2020";
+    }
+
     if(q.length == 0){
         q = "911";
     }
+
+
 
     queryURL += '?' + $.param({
         'api-key': "4022bac12aa44a84a335a5d4e2b379cc",
